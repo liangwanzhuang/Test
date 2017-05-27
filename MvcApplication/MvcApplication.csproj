@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B4E0905-E4D7-4BCB-BBAA-6A7D2D39B6CE}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcApplication</RootNamespace>
+    <AssemblyName>MvcApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Web\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Web\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Web\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Web\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Web\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Web\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Web\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Web\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Web\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Web\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Web\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\Content\ContentController.cs" />
+    <Compile Include="Controllers\Dashboard\DashboardController.cs" />
+    <Compile Include="Controllers\Home\HomePageController.cs" />
+    <Compile Include="Controllers\User\UserController.cs" />
+    <Compile Include="Controllers\WellComePage\WellComeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContentModel.cs" />
+    <Compile Include="Models\CreateUserModel.cs" />
+    <Compile Include="Models\DashboardModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Css\loading.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Css\abbc.css" />
+    <Content Include="Css\font-awesome.min.css" />
+    <Content Include="Image\53ed7aa8Nfa8b13eb.jpg" />
+    <Content Include="Image\ARADown.png" />
+    <Content Include="Image\db_back.png" />
+    <Content Include="Image\global_background.png" />
+    <Content Include="js\easing.js" />
+    <Content Include="js\jquery-3.1.1.min.js" />
+    <Content Include="js\jquery1.8.3.min.js" />
+    <Content Include="js\loading.js" />
+    <Content Include="js\summernote-public.js" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.css" />
+    <Content Include="lib\bootstrap\js\Chart-1.0.1-beta.4.js" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="lib\bootstrap\js\bootstrap.js" />
+    <Content Include="lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="lib\bootstrap\js\jquery.min.js" />
+    <Content Include="lib\bootstrap\js\npm.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-ar-AR.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-bg-BG.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-ca-ES.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-cs-CZ.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-da-DK.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-de-DE.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-el-GR.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-es-ES.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-es-EU.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-fa-IR.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-fi-FI.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-fr-FR.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-gl-ES.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-he-IL.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-hr-HR.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-hu-HU.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-id-ID.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-it-IT.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-ja-JP.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-ko-KR.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-lt-LT.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-lt-LV.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-nb-NO.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-nl-NL.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-pl-PL.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-pt-BR.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-pt-PT.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-ro-RO.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-ru-RU.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-sk-SK.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-sl-SI.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-sr-RS.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-sv-SE.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-ta-IN.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-th-TH.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-tr-TR.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-uk-UA.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-vi-VN.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-zh-CN.js" />
+    <Content Include="lib\summernote\dist\lang\summernote-zh-TW.js" />
+    <Content Include="lib\summernote\dist\plugin\databasic\summernote-ext-databasic.css" />
+    <Content Include="lib\summernote\dist\plugin\databasic\summernote-ext-databasic.js" />
+    <Content Include="lib\summernote\dist\plugin\hello\summernote-ext-hello.js" />
+    <Content Include="lib\summernote\dist\plugin\specialchars\summernote-ext-specialchars.js" />
+    <Content Include="lib\summernote\dist\summernote.css" />
+    <Content Include="lib\summernote\dist\summernote.js" />
+    <Content Include="lib\summernote\dist\summernote.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ar-AR.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ar-AR.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-bg-BG.js" />
+    <Content Include="lib\summernote\js\lang\summernote-bg-BG.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ca-ES.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ca-ES.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-cs-CZ.js" />
+    <Content Include="lib\summernote\js\lang\summernote-cs-CZ.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-da-DK.js" />
+    <Content Include="lib\summernote\js\lang\summernote-da-DK.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-de-DE.js" />
+    <Content Include="lib\summernote\js\lang\summernote-de-DE.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-el-GR.js" />
+    <Content Include="lib\summernote\js\lang\summernote-el-GR.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-es-ES.js" />
+    <Content Include="lib\summernote\js\lang\summernote-es-ES.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-es-EU.js" />
+    <Content Include="lib\summernote\js\lang\summernote-es-EU.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-fa-IR.js" />
+    <Content Include="lib\summernote\js\lang\summernote-fa-IR.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-fi-FI.js" />
+    <Content Include="lib\summernote\js\lang\summernote-fi-FI.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-fr-FR.js" />
+    <Content Include="lib\summernote\js\lang\summernote-fr-FR.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-gl-ES.js" />
+    <Content Include="lib\summernote\js\lang\summernote-gl-ES.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-he-IL.js" />
+    <Content Include="lib\summernote\js\lang\summernote-he-IL.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-hr-HR.js" />
+    <Content Include="lib\summernote\js\lang\summernote-hr-HR.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-hu-HU.js" />
+    <Content Include="lib\summernote\js\lang\summernote-hu-HU.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-id-ID.js" />
+    <Content Include="lib\summernote\js\lang\summernote-id-ID.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-it-IT.js" />
+    <Content Include="lib\summernote\js\lang\summernote-it-IT.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ja-JP.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ja-JP.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ko-KR.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ko-KR.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-lt-LT.js" />
+    <Content Include="lib\summernote\js\lang\summernote-lt-LT.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-lt-LV.js" />
+    <Content Include="lib\summernote\js\lang\summernote-lt-LV.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-nb-NO.js" />
+    <Content Include="lib\summernote\js\lang\summernote-nb-NO.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-nl-NL.js" />
+    <Content Include="lib\summernote\js\lang\summernote-nl-NL.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-pl-PL.js" />
+    <Content Include="lib\summernote\js\lang\summernote-pl-PL.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-pt-BR.js" />
+    <Content Include="lib\summernote\js\lang\summernote-pt-BR.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-pt-PT.js" />
+    <Content Include="lib\summernote\js\lang\summernote-pt-PT.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ro-RO.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ro-RO.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ru-RU.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ru-RU.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-sk-SK.js" />
+    <Content Include="lib\summernote\js\lang\summernote-sk-SK.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-sl-SI.js" />
+    <Content Include="lib\summernote\js\lang\summernote-sl-SI.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="lib\summernote\js\lang\summernote-sr-RS-Latin.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-sr-RS.js" />
+    <Content Include="lib\summernote\js\lang\summernote-sr-RS.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-sv-SE.js" />
+    <Content Include="lib\summernote\js\lang\summernote-sv-SE.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ta-IN.js" />
+    <Content Include="lib\summernote\js\lang\summernote-ta-IN.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-th-TH.js" />
+    <Content Include="lib\summernote\js\lang\summernote-th-TH.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-tr-TR.js" />
+    <Content Include="lib\summernote\js\lang\summernote-tr-TR.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-uk-UA.js" />
+    <Content Include="lib\summernote\js\lang\summernote-uk-UA.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-vi-VN.js" />
+    <Content Include="lib\summernote\js\lang\summernote-vi-VN.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-zh-CN.js" />
+    <Content Include="lib\summernote\js\lang\summernote-zh-CN.min.js" />
+    <Content Include="lib\summernote\js\lang\summernote-zh-TW.js" />
+    <Content Include="lib\summernote\js\lang\summernote-zh-TW.min.js" />
+    <Content Include="lib\summernote\js\summernote.js" />
+    <Content Include="lib\summernote\js\summernote.min.js" />
+    <Content Include="lib\summernote\lang\summernote-ar-AR.js" />
+    <Content Include="lib\summernote\lang\summernote-bg-BG.js" />
+    <Content Include="lib\summernote\lang\summernote-ca-ES.js" />
+    <Content Include="lib\summernote\lang\summernote-cs-CZ.js" />
+    <Content Include="lib\summernote\lang\summernote-da-DK.js" />
+    <Content Include="lib\summernote\lang\summernote-de-DE.js" />
+    <Content Include="lib\summernote\lang\summernote-el-GR.js" />
+    <Content Include="lib\summernote\lang\summernote-es-ES.js" />
+    <Content Include="lib\summernote\lang\summernote-es-EU.js" />
+    <Content Include="lib\summernote\lang\summernote-fa-IR.js" />
+    <Content Include="lib\summernote\lang\summernote-fi-FI.js" />
+    <Content Include="lib\summernote\lang\summernote-fr-FR.js" />
+    <Content Include="lib\summernote\lang\summernote-gl-ES.js" />
+    <Content Include="lib\summernote\lang\summernote-he-IL.js" />
+    <Content Include="lib\summernote\lang\summernote-hr-HR.js" />
+    <Content Include="lib\summernote\lang\summernote-hu-HU.js" />
+    <Content Include="lib\summernote\lang\summernote-id-ID.js" />
+    <Content Include="lib\summernote\lang\summernote-it-IT.js" />
+    <Content Include="lib\summernote\lang\summernote-ja-JP.js" />
+    <Content Include="lib\summernote\lang\summernote-ko-KR.js" />
+    <Content Include="lib\summernote\lang\summernote-lt-LT.js" />
+    <Content Include="lib\summernote\lang\summernote-lt-LV.js" />
+    <Content Include="lib\summernote\lang\summernote-nb-NO.js" />
+    <Content Include="lib\summernote\lang\summernote-nl-NL.js" />
+    <Content Include="lib\summernote\lang\summernote-pl-PL.js" />
+    <Content Include="lib\summernote\lang\summernote-pt-BR.js" />
+    <Content Include="lib\summernote\lang\summernote-pt-PT.js" />
+    <Content Include="lib\summernote\lang\summernote-ro-RO.js" />
+    <Content Include="lib\summernote\lang\summernote-ru-RU.js" />
+    <Content Include="lib\summernote\lang\summernote-sk-SK.js" />
+    <Content Include="lib\summernote\lang\summernote-sl-SI.js" />
+    <Content Include="lib\summernote\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="lib\summernote\lang\summernote-sr-RS.js" />
+    <Content Include="lib\summernote\lang\summernote-sv-SE.js" />
+    <Content Include="lib\summernote\lang\summernote-ta-IN.js" />
+    <Content Include="lib\summernote\lang\summernote-th-TH.js" />
+    <Content Include="lib\summernote\lang\summernote-tr-TR.js" />
+    <Content Include="lib\summernote\lang\summernote-uk-UA.js" />
+    <Content Include="lib\summernote\lang\summernote-vi-VN.js" />
+    <Content Include="lib\summernote\lang\summernote-zh-CN.js" />
+    <Content Include="lib\summernote\lang\summernote-zh-TW.js" />
+    <Content Include="lib\sweetalert\sweetalert-dev.js" />
+    <Content Include="lib\sweetalert\sweetalert.css" />
+    <Content Include="lib\sweetalert\sweetalert.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="lib\summernote\css\" />
+    <Folder Include="Script\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\HomePage\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\WellCome\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SQLDAL\SQLDAL.csproj">
+      <Project>{7d48dd3c-35a9-408f-b539-559615ebc882}</Project>
+      <Name>SQLDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Dashboard\Index2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Dashboard\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Content\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\summernote\js\lang\summernote-mn-MN" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\summernote\less\elements.less" />
+    <Content Include="lib\summernote\less\summernote.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\summernote\lang\summernote-mn-MN" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\summernote\dist\font\summernote.eot" />
+    <Content Include="lib\summernote\dist\font\summernote.ttf" />
+    <Content Include="lib\summernote\dist\font\summernote.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Content\Create.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7248/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

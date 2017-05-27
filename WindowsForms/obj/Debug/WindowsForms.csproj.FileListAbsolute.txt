@@ -1,0 +1,13 @@
+D:\Code\Test\WindowsForms\obj\Debug\WindowsForms.csprojResolveAssemblyReference.cache
+D:\Code\Test\WindowsForms\obj\Debug\WindowsForms.Form1.resources
+D:\Code\Test\WindowsForms\obj\Debug\WindowsForms.Properties.Resources.resources
+D:\Code\Test\WindowsForms\obj\Debug\WindowsForms.csproj.GenerateResource.Cache
+D:\Code\Test\WindowsForms\bin\Debug\WindowsForms.exe.config
+D:\Code\Test\WindowsForms\bin\Debug\WindowsForms.exe
+D:\Code\Test\WindowsForms\bin\Debug\WindowsForms.pdb
+D:\Code\Test\WindowsForms\bin\Debug\ModelInfo.dll
+D:\Code\Test\WindowsForms\bin\Debug\SQLDAL.dll
+D:\Code\Test\WindowsForms\bin\Debug\ModelInfo.pdb
+D:\Code\Test\WindowsForms\bin\Debug\SQLDAL.pdb
+D:\Code\Test\WindowsForms\obj\Debug\WindowsForms.exe
+D:\Code\Test\WindowsForms\obj\Debug\WindowsForms.pdb

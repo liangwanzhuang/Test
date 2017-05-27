@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/lib/bootstrap/js/jquery.min.js"></script>
+<script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/lib/summernote/dist/summernote.min.js"></script>
+<script src="~/lib/summernote/lang/summernote-zh-CN.js"></script>
+<link rel="stylesheet" type="text/css" href="~/lib/summernote/dist/summernote.css">
+<div id="parent">
+    @*<div id="summernote" ></div>
+
+    <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit 1</button>
+    <button id="save" class="btn btn-primary" onclick="save()" type="button">Save 2</button>*@
+</div>
+
+<script src="~/js/summernote-public.js"></script>
+<script type="text/javascript">
+    for (var i = 0; i < 6; i++) {
+
+        document.write("<div id='summernote" + i + "'></div>");
+        document.write("  <button id='edit' class='btn btn-primary' onclick='edit(summernote"+i+")' type='button'>Edit</button>");
+        document.write("  <button id='save' class='btn btn-primary' onclick='save(summernote" + i + ")' type='button'>save</button>");
+        shuowSummernote("#summernote"+i, "hello word"+i);
+    }
+
+
+</script>

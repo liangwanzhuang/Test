@@ -1,0 +1,7 @@
+D:\Code\WebSiteNew\ModelInfo\bin\ModelInfo.dll
+D:\Code\WebSiteNew\ModelInfo\bin\ModelInfo.pdb
+D:\Code\WebSiteNew\ModelInfo\bin\SQLDAL.dll
+D:\Code\WebSiteNew\ModelInfo\bin\SQLDAL.pdb
+D:\Code\WebSiteNew\ModelInfo\obj\Debug\ModelInfo.csprojResolveAssemblyReference.cache
+D:\Code\WebSiteNew\ModelInfo\obj\Debug\ModelInfo.dll
+D:\Code\WebSiteNew\ModelInfo\obj\Debug\ModelInfo.pdb

@@ -1,0 +1,234 @@
+﻿<!--左侧导航-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <title>@ViewBag.Title</title>
+        <meta name="HandheldFriendly" content="True" />
+        <!-- Bootstrap3.3.5 CSS -->
+        <link href="@Url.Content("~/lib/bootstrap/css/bootstrap.min.css")" rel="stylesheet" type="text/css" /> 
+                <!-- jQuery1.11.3 (necessary for Bo otstrap's JavaScript plugins) -->
+        <script src="@Url.Content("~/lib/bootstrap/js/jquery.min.js")" type="text/javascript"></script>
+        
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script>
+            $(function () {
+
+                $(".panel-heading").click(function (e) {
+                    //alert(2)
+                    /*切换折叠指示图标*/
+                    //$(this).find("span").toggleClass("glyphicon-chevron-down");
+                    //$(this).find("span").toggleClass("glyphicon-chevron-up");
+                    //var ttt = $(this).find("span").text();;
+                    var txt = $(this).find("span").text();;
+                    if (txt == "∧") {
+                        $(this).find("span").text("∨");
+                    }
+                    else {
+                        $(this).find("span").text("∧");
+                    }
+                });
+            });
+        </script>
+        <style>
+            .panel-group{max-height:770px;overflow: auto;}
+            .leftMenu{margin:0px;margin-top:0px;}
+            .leftMenu .panel-heading{font-size:14px;padding-left:20px;height:36px;line-height:36px;color:white;position:relative;cursor:pointer;}/*转成手形图标*/
+            .leftMenu .panel-heading span{position:absolute;right:10px;top:3px;}
+            .leftMenu .menu-item-left{padding: 2px; background: transparent; border:1px solid transparent;border-radius: 6px;}
+            .leftMenu .menu-item-left:hover{background:#C4E3F3;border:1px solid #1E90FF;}
+        </style>
+    </head>
+
+    <body style=" background-image:url(/Image/global_background.png);background-size:cover">
+       
+        <div class="row">
+            <div class="col-md-2">
+                <div class="panel-group table-responsive" role="tablist" style="width:210px">
+                    <div class="panel panel-primary leftMenu">
+                        <!-- 利用data-target指定要折叠的分组列表 -->
+                        <div  style="background-color:#4D5360" class="panel-heading" id="collapseListGroupHeading1" data-toggle="collapse" data-target="#collapseListGroup1" role="tab" >
+                            <h4 class="panel-title">
+                                分组1
+                                <span class="">∧</span>
+                            </h4>
+                        </div>
+                        <!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+                        <div id="collapseListGroup1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+                            <ul class="list-group">
+                              <li class="list-group-item" style="padding:0px">
+                                <!-- 利用data-target指定URL -->
+                               <!-- <button class="menu-item-left" data-target="test2.html">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>分组项1-1
+                                   class="menu-item-left"
+                                </button>-->
+                                  <a href="/Content/Index"  style="text-decoration:none;color:black;">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>新建
+                                      </div>
+                                  </a>
+                              </li>
+                              <li  class="list-group-item" style="padding:0px">
+                                 <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              <li class="list-group-item" style="padding:0px">
+                                <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="list-group-item" style="padding:0px">
+                                <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="list-group-item" style="padding:0px">
+                                 <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                            </ul>
+                        </div>
+                    </div><!--panel end-->
+                    <div class="panel panel-primary leftMenu">
+                        <div style="background-color:#4D5360" class="panel-heading" id="collapseListGroupHeading2" data-toggle="collapse" data-target="#collapseListGroup2" role="tab" >
+                            <h4 class="panel-title">
+                                分组2
+                                <span class="">∨</span>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading2">
+                            <ul class="list-group">
+                              <li class="list-group-item" style="padding:0px">
+                               <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5"" >
+                                           <span class="" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="list-group-item" style="padding:0px">
+                                <a href="HtmlPage4.html" style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="list-group-item" style="padding:0px">
+                                <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="list-group-item" style="padding:0px">
+                                <a href="HtmlPage4.html" style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5"" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px;"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>  
+                            <!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+                    <div class="panel panel-primary leftMenu">
+                        <div style="background-color:#4D5360" class="panel-heading" id="collapseListGroupHeading3" data-toggle="collapse" data-target="#collapseListGroup3" role="tab" >
+                            <h4 class="panel-title">
+                                分组2
+                                <span class="">∨</span>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading3">
+                            <ul class="list-group">
+                              <li class="list-group-item" style="padding:0px">
+                               <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="list-group-item" style="padding:0px">
+                                <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="list-group-item" style="padding:0px">
+                                <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="list-group-item" style="padding:0px">
+                                <a href="HtmlPage4.html" style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px;"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>                
+                     <div class="panel panel-primary leftMenu">
+                        <div style="background-color:#4D5360" class="panel-heading" id="collapseListGroupHeading4" data-toggle="collapse" data-target="#collapseListGroup4" role="tab" >
+                            <h4 class="panel-title">
+                                分组2
+                                <span class="">∨</span>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading4" >
+                            <ul class="list-group">
+                              <li class="list-group-item" style="padding:0px">
+                               <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="list-group-item" style="padding:0px">
+                                <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="list-group-item" style="padding:0px">
+                                <a href="HtmlPage4.html"  style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="list-group-item" style="padding:0px">
+                                <a href="HtmlPage4.html" style="text-decoration:none;color:black">
+                                      <div style="width:100%;height:47px;margin-top:0px;background-color:#D4CCC5" >
+                                           <span class="glyphicon glyphicon-triangle-right" style="margin-left:15px;margin-top:23px;"></span>分组项1-1
+                                      </div>
+                                  </a>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div  style="margin-left:230px;height:600px;width:82%">
+                 @RenderBody()
+        </div> 
+            </div>
+    </body>
+    <script src="@Url.Content("~/lib/bootstrap/js/bootstrap.min.js")" type="text/javascript"></script>
+</html>

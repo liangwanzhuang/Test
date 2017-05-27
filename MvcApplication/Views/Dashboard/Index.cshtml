@@ -1,0 +1,138 @@
+﻿@model MvcApplication.Models.DashboardModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<canvas id="myChart2" width="150" height="150"></canvas>
+<canvas id="myChart" width="150" height="150"></canvas>*@
+@*<div style="margin-top:0px; background-color:#808080;width:auto;height:70px;">
+    <div style="margin-top:10px"><span > 新建</span></div>
+    
+</div>*@
+
+<div style="position: relative">
+    <div id="div1" style="width: 400px; height: 400px; background-color: #949FB1; position: absolute">
+        <table class="table" id="tb">
+            @*<caption>上下文表格布局</caption>*@
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>项目名称</th>
+                    <th>启动时间</th>
+                    <th>状态</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="div2" style="width: 400px; height: 400px; background-color: #949FB1; position: absolute">
+        <table class="table" id="tb2">
+            @*<caption>上下文表格布局</caption>*@
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>标题</th>
+                    <th>创建者</th>
+                    <th>进度</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+<link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css">
+<script src="~/lib/bootstrap/js/Chart-1.0.1-beta.4.js"></script>
+<script src="~/lib/bootstrap/js/jquery.min.js"></script>
+<script>
+
+
+    var data = [
+    {
+        value: 30,
+        color: "#F7464A"
+    },
+    {
+        value: 50,
+        color: "#E2EAE9"
+    },
+    {
+        value: 100,
+        color: "#D4CCC5"
+    },
+    {
+        value: 40,
+        color: "#949FB1"
+    },
+    {
+        value: 120,
+        color: "#4D5360"
+    }
+    ];
+
+    var data2 = [
+   {
+       value: 30,
+       color: "#F7464A"
+   },
+   {
+       value: 50,
+       color: "#E2EAE9"
+   },
+   {
+       value: 100,
+       color: "#D4CCC5"
+   },
+   {
+       value: 40,
+       color: "#949FB1"
+   },
+   {
+       value: 120,
+       color: "#4D5360"
+   }
+    ];
+
+    window.onload = function () {
+        //var ctx = document.getElementById("myChart2").getContext("2d");
+        //new Chart(ctx).Doughnut(data);
+
+        //var ctx = document.getElementById("myChart").getContext("2d");
+        //new Chart(ctx).Doughnut(data2);
+
+        //var myChart2 = document.getElementById('myChart2');
+        //myChart2.style.marginLeft = document.documentElement.clientWidth / 4 + "px";
+
+        //var myChart = document.getElementById('myChart');
+        //myChart.style.marginLeft = document.documentElement.clientWidth / 4 + "px";
+
+        var div = document.getElementById('div1');
+        div.style.marginLeft = document.documentElement.clientWidth / 6 + "px";
+
+        var div = document.getElementById('div2');
+        div.style.marginLeft = document.documentElement.clientWidth / 1.9 + "px";
+        var newTr = "";
+        for (var i = 0; i < 10; i++) {
+            newTr += "<tr ' id='" + i + "' onclick='clickTr(" + i + ")' onmousemove='changebackground(" + i + ")' ><td>" + "bianbao" + "</td><td>" + "mingcheng" + "</td><td>" + "2017" + "</td><td>" + "未完成" + "</td></tr>";
+        }
+        $("#tb").append(newTr);
+
+        var newTr2 = "";
+        for (var i = 0; i < 10; i++) {
+            newTr2 += "<tr ' id='" + i + "' onclick='clickTr(" + i + ")' onmousemove='changebackground(" + i + ")' ><td>" + "bianbao" + "</td><td>" + "mingcheng" + "</td><td>" + "2017" + "</td><td>" + "未完成" + "</td></tr>";
+        }
+        $("#tb2").append(newTr2);
+    }
+    var tbId = "";
+    function changebackground(id) {
+        //var tb = document.getElementById(id);
+        //tb.style.backgroundColor = "green";
+    }
+    function clickTr(id) {
+        alert(id);
+    }
+
+</script>

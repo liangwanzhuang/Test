@@ -1,0 +1,124 @@
+﻿@model MvcApplication.Models.LoginModel
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Login</title>
+    <link rel="stylesheet" media="all" href="~/Css/abbc.css" />
+    <link rel="stylesheet" media="screen" href="~/Css/font-awesome.min.css" />
+    <script src="~/lib/bootstrap/js/jquery.min.js"></script>
+</head>
+<body id="sessions_controller" class="new_action">
+
+    <nav class="navbar navbar-toggleable-sm navbar-static-top">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+
+        <a class="navbar-brand" href="/">Mailblast</a>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Pricing</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">Docs</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="~/User/Create">Signup</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    @Html.Raw(ViewBag.js)
+   @* using (Html.BeginForm())*@
+@*    @using (Html.BeginForm("comment","home" ,FormMethod.Post))
+          {
+
+             <div><input type="submit" value="" /></div>
+          }*@
+    @using (Html.BeginForm())
+    { 
+        <div class="dialog">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Sign in</h4>
+                </div>
+
+                <div class="card-block">
+                    <div style="margin: 0 -15px;">
+                    </div>
+                    <form role="form" class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post">
+                        <input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="G2vMVgQ3XdMTRTLduppT+QxI0QOyA5U0rVOnbHzPH/jHMDiVGG7YgJQMz6Pt62MpF77Cdh0x9B2LXiBonN31RA==" />
+                        <div class="form-group">
+                            <label class="form-control-label required" for="user_email">UserName</label>
+                             @Html.TextBoxFor(m => m.Email,  new { @class="form-control",type="text", name="user[password]", id="user_password"  })
+                           @* <input autofocus="autofocus" class="form-control" type="email" value="" name="user[email]" id="user_email" />*@
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label required" for="user_password">Password</label>
+                              @Html.TextBoxFor(m => m.Password,  new { @class="form-control",type="password", name="user[password]", id="user_password"  })
+                            @*<input class="form-control" type="password" name="user[password]" id="user_password" />*@
+                        </div>
+
+                        <div class="form-check">
+                            <label class="form-check-label" for="user_remember_me">
+                                <input name="user[remember_me]" type="hidden" value="0" /><input class="form-check-input" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+                                Remember me</label>
+                        </div>
+
+                        <input type="submit" name="commit" value="Sign in" class="btn btn-primary" data-disable-with="Sign in" onclick="Login();"/>
+                        <a class="btn btn-link text-warning float-right" href="/users/password/new">Forgot your password?</a>
+                    </form>
+                </div>
+            </div>
+            <p class="text-center">
+                <a href="/users/confirmation/new">Didn&#39;t receive confirmation instructions?</a>
+            </p>
+        </div>
+    }
+
+
+    <div class="footer">
+        <footer class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5 style="color: #fff">Quick Links</h5>
+                        <p><a href="#">Api Docs</a></p>
+                        <p><a href="#">Pricing</a></p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <h5 style="color: #fff">Help</h5>
+                        <p><a href="#">contact@mailblast.io</a></p>
+                        <p><a href="#">Documentation</a></p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <h5 style="color: #fff">Legal</h5>
+                        <p><a href="#">Terms of Service</a></p>
+                        <p><a href="#">Privacy Policy</a></p>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <h5 style="color: #fff">Social</h5>
+                        <a class="btn btn-social-icon btn-facebook btn-lg" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-twitter btn-lg" href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+     <script>
+         function Login() {
+             $("form").submit();
+         }
+ </script>
+</html>

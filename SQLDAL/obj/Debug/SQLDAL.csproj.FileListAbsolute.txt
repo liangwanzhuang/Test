@@ -1,0 +1,9 @@
+D:\Code\WebSiteNew\SQLDAL\bin\SQLDAL.dll
+D:\Code\WebSiteNew\SQLDAL\bin\SQLDAL.pdb
+D:\Code\WebSiteNew\SQLDAL\obj\Debug\SQLDAL.dll
+D:\Code\WebSiteNew\SQLDAL\obj\Debug\SQLDAL.pdb
+D:\Code\Test\SQLDAL\bin\SQLDAL.dll
+D:\Code\Test\SQLDAL\bin\SQLDAL.pdb
+D:\Code\Test\SQLDAL\obj\Debug\SQLDAL.dll
+D:\Code\Test\SQLDAL\obj\Debug\SQLDAL.pdb
+D:\Code\Test\SQLDAL\obj\Debug\SQLDAL.csprojResolveAssemblyReference.cache
